@@ -1,0 +1,20 @@
+# Python virtual environment
+venv/
+
+# Satellite data directory (likely contains large files)
+satellite_data/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*.class
+
+# Log files that might be generated
+*.log
+
+# Environment configuration
+.env
+
+# OS specific files
+.DS_Store
+Thumbs.db
