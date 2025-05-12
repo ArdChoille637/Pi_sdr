@@ -1,0 +1,109 @@
+Satellite Tracker
+A comprehensive system for tracking, predicting, and recording satellite passes using RTL-SDR receivers with GQRX.
+
+Features
+Automated satellite pass prediction and scheduling
+Automatic recording with GQRX radio software
+Mobile GPS integration for portable operation
+Support for weather satellites (NOAA and METEOR) and ISS
+Command-line tools for both automated and manual operation
+Requirements
+Python 3.7 or higher
+GQRX software with remote control enabled
+GPredict for satellite tracking (optional)
+RTL-SDR or compatible Software Defined Radio
+iPhone with GPS2IP app (optional for mobile operation)
+Installation
+Clone the repository:
+bash
+git clone https://github.com/yourusername/satellite-tracker.git
+cd satellite-tracker
+Create and activate a virtual environment:
+bash
+python -m venv .venv
+source .venv/bin/activate  # Linux/Mac
+# or
+.venv\Scripts\activate.bat  # Windows
+Install dependencies:
+bash
+pip install -r requirements.txt
+Directory Structure
+The project has been refactored into a modular structure:
+
+satellite_tracker/
+├── .gitignore           # Git ignore file
+├── README.md            # This documentation file
+├── requirements.txt     # Python dependencies
+├── activate.sh          # Virtual environment activation script
+├── config/              # Configuration directory
+│   └── default.ini      # Default configuration values
+├── satellite_tracker/   # Main package
+│   ├── common/          # Common utilities
+│   ├── gps/             # GPS integration
+│   ├── radio/           # GQRX radio control
+│   ├── satellites/      # Satellite definitions and prediction
+│   └── recorder/        # Recording management
+└── scripts/             # Command-line tools
+Usage
+Basic Setup
+Run the setup wizard to configure the system:
+
+bash
+python scripts/track_satellite.py setup
+List Available Satellites
+bash
+python scripts/track_satellite.py list
+Predicting Passes
+Update pass predictions:
+
+bash
+python scripts/track_satellite.py predict --update
+Show the next pass:
+
+bash
+python scripts/track_satellite.py predict --next
+Recording Satellites
+Start automated pass monitoring and recording:
+
+bash
+python scripts/track_satellite.py record --start
+Manually schedule a recording:
+
+bash
+python scripts/track_satellite.py record --manual "NOAA-19" "2025-05-12 15:30:00" 15
+Simple Controller
+For quick manual operation:
+
+bash
+python scripts/simple_controller.py
+GPS Integration
+Set up GPS integration:
+
+bash
+python scripts/gps_integration.py --setup
+Start GPS location tracking:
+
+bash
+python scripts/gps_integration.py --start
+Show current GPS status:
+
+bash
+python scripts/gps_integration.py --status
+Satellite Configuration
+Supported satellites are configured in satellite_tracker/satellites/definitions.py and include:
+
+NOAA-15, NOAA-18, NOAA-19 (Weather satellites)
+METEOR-M2, METEOR-M2-2, METEOR-M2-3 (Russian weather satellites)
+ISS (International Space Station)
+Mobile Operation
+For mobile operation with an iPhone:
+
+Install GPS2IP app on your iPhone
+Configure the app according to the setup wizard instructions
+Run the GPS integration to provide location updates to the system
+Data Storage
+Recorded satellite data is stored in ~/satellite_data/ with subdirectories for each satellite.
+
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
