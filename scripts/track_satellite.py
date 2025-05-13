@@ -11,11 +11,11 @@ from pathlib import Path
 # Add parent directory to path for imports
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from satellite_tracker.common import config, logging
-from satellite_tracker.radio import gqrx
-from satellite_tracker.satellites import predictor, definitions
-from satellite_tracker.recorder import manager
-from satellite_tracker.gps import location
+from common import config, logging
+from radio import gqrx
+from satellites import predictor, definitions
+from recorder import manager
+from gps import location
 
 def main():
     """Main function for satellite tracking"""
