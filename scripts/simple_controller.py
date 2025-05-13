@@ -7,9 +7,6 @@ import sys
 import time
 from pathlib import Path
 
-# Add parent directory to path for imports
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-
 from satellite_tracker.common import logging
 from satellite_tracker.radio import gqrx
 from satellite_tracker.satellites import definitions

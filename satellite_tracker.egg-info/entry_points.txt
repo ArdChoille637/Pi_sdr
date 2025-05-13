@@ -1,0 +1,4 @@
+[console_scripts]
+satellite-gps = scripts.gps_integration:main
+satellite-simple = scripts.simple_controller:main
+satellite-track = scripts.track_satellite:main
