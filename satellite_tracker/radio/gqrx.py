@@ -8,7 +8,7 @@ import time
 import logging
 from pathlib import Path
 import datetime
-from common import definitions
+from satellite_tracker.common import definitions
 
 logger = logging.getLogger(__name__)
 

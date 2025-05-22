@@ -14,7 +14,7 @@ import datetime
 import serial
 import pynmea2
 import subprocess
-from ..common import config
+from satellite_tracker.common import config
 
 logger = logging.getLogger(__name__)
 

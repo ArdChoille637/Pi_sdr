@@ -8,15 +8,9 @@ import argparse
 import time
 from pathlib import Path
 
-# from common import config, logging
-# from radio import gqrx
-# from satellites import predictor, definitions
-# from recorder import manager
-# from gps import location
-
 # Use absolute imports
 from satellite_tracker.common import config, logging
-from satellite_tracker.radio import gqrx
+from satellite_tracker.radio import gqrx  
 from satellite_tracker.satellites import predictor, definitions
 from satellite_tracker.recorder import manager
 from satellite_tracker.gps import location

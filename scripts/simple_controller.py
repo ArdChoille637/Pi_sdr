@@ -5,11 +5,13 @@
 import os
 import sys
 import time
-from pathlib import Path
 
-from satellite_tracker.common import logging
-from satellite_tracker.radio import gqrx
-from satellite_tracker.satellites import definitions
+# Use absolute imports
+from satellite_tracker.common import config, logging
+from satellite_tracker.radio import gqrx  
+from satellite_tracker.satellites import predictor, definitions
+from satellite_tracker.recorder import manager
+from satellite_tracker.gps import location
 
 def main():
     """Main function for simple satellite controller"""
